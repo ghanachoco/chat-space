@@ -52,7 +52,7 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-## chatテーブル
+## chatsテーブル
 |column|type|option|
 |------|----|------|
 |message|text||
