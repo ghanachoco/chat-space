@@ -26,7 +26,7 @@ Things you may want to cover:
 ## usersテーブル
 |column|type|option|
 |------|----|------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ### Association
@@ -34,11 +34,10 @@ Things you may want to cover:
 - has_many :chats
 - has_many :groups_users
 
-## groupテーブル
+## groupsテーブル
 |column|type|option|
 |------|----|------|
-|groupname|string|null: false|
-|groups_users_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :group_users
 - has_many :chats
@@ -56,8 +55,8 @@ Things you may want to cover:
 ## chatテーブル
 |column|type|option|
 |------|----|------|
-|message|text|null: false|
-|image|text|null: false|
+|message|text||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
