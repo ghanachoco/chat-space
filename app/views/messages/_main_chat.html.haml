@@ -1,0 +1,36 @@
+.chat-main
+  .main-header
+    .header-leftbox
+      %h2.current-group
+        group_name
+      %ul.member-list
+        you  
+    = link_to "#" do
+      .edit-btn
+        Edit
+
+  .messages
+    .messages-box
+      .messages-info
+        .messages-name
+          YOU
+        .messages-date
+          2019/11/20(Wed) 18:43:01
+      .messages-text
+        おはよう！
+    .messages-box
+      .messages-info
+        .messages-name
+          YOU
+        .messages-date
+          2019/11/20(Wed) 18:43:01
+      .messages-text
+        おはよう！
+  .form
+    %form.new-message
+      .input
+        %input.input-text{type: "text", placeholder: "type a message"}
+        %label.image
+          = icon('fa','image')
+          %input.hidden{type: "file"}
+      %input.submit-btn{type: "submit", value: "Send", name: "commit"}
