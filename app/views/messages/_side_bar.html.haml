@@ -1,0 +1,19 @@
+
+.chat-side
+  .side-header
+    .side-header__box
+      %p.name
+        YOU
+      %ul.lists
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'edit', class: 'icon')
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'cog', class: 'icon')
+  .groups
+    .group
+      %p.group__name
+        group_name
+      %p.group__text
+        おはよう！
