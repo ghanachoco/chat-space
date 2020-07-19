@@ -1,17 +1,19 @@
 
 .chat-side
-  -# <サイドバー>
   .side-header
-    .side-box
-      .user-name
+    .side-header__box
+      %p.name
         YOU
-      .manu
-        .icon
-          <i class="far fa-edit"></i>
-          <i class="fas fa-cog"></i>
+      %ul.lists
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'edit', class: 'icon')
+        %li.list
+          = link_to '#' do
+            = icon('fa', 'cog', class: 'icon')
   .groups
-    .groups-box
-      %p.groups-name
+    .group
+      %p.group__name
         group_name
-      %p.groups-text
+      %p.group__text
         おはよう！
