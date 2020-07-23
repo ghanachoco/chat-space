@@ -57,3 +57,8 @@ gem 'haml-rails'
 
 # FontAwesomeを導入しよう
 gem 'font-awesome-sass'
+
+# deviceのインストール
+gem 'devise'
+
+gem 'rails-i18n'
