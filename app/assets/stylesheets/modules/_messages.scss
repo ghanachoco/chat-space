@@ -75,13 +75,14 @@
   .header {
     width: calc(100vw - 300px);
     background-color: #ffffff;
-    border-bottom: 1px solid #595959;
     height: 100px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     padding: 0 40px;
     align-items: center;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
 
     .header-leftbox {
       .current-group {
@@ -95,6 +96,10 @@
         display: flex;
         list-style: none;
         margin-left: 5px;
+        .member {
+          margin-left: 5px;
+        }
+
       }
     }
     .edit-btn {
@@ -113,8 +118,7 @@
     height: calc(100vh - 190px);
     padding: 35px 40px;
     .message {
-      margin-bottom: 46px;
-      height: 42px;
+      padding-bottom: 40px;
       .info {
         display: flex;
         margin-bottom: 12px;
@@ -132,55 +136,47 @@
       .text {
         font-size: 14px;
         color: #434A54;
-        
+      }
+      .image {
+        height: 200px;
+        width: 200px;
       }
     }
   }
   .form {
-    width: calc(100vw - 300px);
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    background-color: #d2d2d2;
-    padding: 20px 40px;
-
-   
+    padding: 20px 50px 20px 40px;
     .new-message {
-      display: flex;
-      justify-content: space-between;
-      .input {
-        height: 50px;
-        width: calc(100vw - 55px);
-        padding-right: 10px;
-        background-color: #ffffff;
-        position: relative;
-        font-size: 16px;
-        color: #434a54;
-        border-style: none;
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+      padding-left: 5px;
+    }
+    .input {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      .input-text {
+        font-size: 20px;
         line-height: 50px;
-        display: flex;
-        justify-content: space-between;
-        .input-text {
-          border: none;
-          outline: none;
-          padding-left: 15px;
-          padding-right: 50px;
-        }
-
-        .hidden {
-          display: none;
-        }
       }
-      .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: skyblue;
-        font-size: 15px;
-        cursor: pointer;
-        color: #1a1d21;
-        border: none;
-        outline: none;
+      .hidden {
+        display: none;
       }
+    }
+    .submit-btn {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }

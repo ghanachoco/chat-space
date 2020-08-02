@@ -2,35 +2,24 @@
   .header
     .header-leftbox
       %h2.current-group
-        group_name
+        =@group.name
       %ul.member-list
-        you  
+        -# = group_user.user_id
+        Member:
+        - @group.users.each do |user|
+          %li.member= user.name
     = link_to "#" do
       .edit-btn
-        Edit
+        =link_to "Edit", edit_group_path(@group)
 
   .messages
-    .message
-      .info
-        .info__name
-          YOU
-        .info__date
-          2019/11/20(Wed) 18:43:01
-      .text
-        おはよう！
-    .message
-      .info
-        .info__name
-          YOU
-        .info__date
-          2019/11/20(Wed) 18:43:01
-      .text
-        おはよう！
+    = render @messages
+
   .form
-    %form.new-message
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'new-message', placeholder: 'type a message'
       .input
-        %input.input-text{type: "text", placeholder: "type a message"}
-        %label.image
-          = icon('fa','image')
-          %input.hidden{type: "file"}
-      %input.submit-btn{type: "submit", value: "Send", name: "commit"}
+        = f.label :image, class: 'input-text' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: "submit-btn"
