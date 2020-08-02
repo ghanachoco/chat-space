@@ -64,3 +64,6 @@ gem 'devise'
 gem 'rails-i18n'
 
 gem 'pry-rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
