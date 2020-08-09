@@ -41,7 +41,6 @@ $(function(){
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault()
-    // console.log('hoge')
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
